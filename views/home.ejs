@@ -5,6 +5,12 @@
     </p>
     <% console.log(posts) %>
         <% posts.forEach(function(post){ %>
-            <% console.log(post.title); %>
-                <% }) %>
-                    <%- include("partials/footer"); -%>
+            <h1>
+                <%= post.title %>
+            </h1>
+            <p>
+                <%= post.content.substring(0,100) +"..." %>
+                    <a href="/post/<%=post.title%>">read more</a>
+            </p>
+            <% }) %>
+                <%- include("partials/footer"); -%>

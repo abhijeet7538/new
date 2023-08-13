@@ -1,5 +1,5 @@
 <%- include("partials/header"); -%>
-    <h1>home</h1>
+    <h1>OBI-WAN</h1>
     <p>
         <%= startingContent %>
     </p>
@@ -10,7 +10,12 @@
             </h1>
             <p>
                 <%= post.content.substring(0,100) +"..." %>
-                    <a href="/post/<%=post.title%>">read more</a>
+                    <a href="/post/<%=post._id%>">read more</a>
             </p>
             <% }) %>
+                <div class="cont">
+                    <div class="btn-holder">
+                        <a class="button-89" href="compose">Compose</a>
+                    </div>
+                </div>
                 <%- include("partials/footer"); -%>
